@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='calcApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>Weekend 3 Challenge</title>
+    <script src="angular.min.js"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  </head>
+  <body ng-controller="MainController">
+    <div class="calculator">
+    <h1>CASIO<span>&reg</span></h1>
+    <br />
+    <div class="display">
+      {{result}}
+    </div>
+    <div class="buttons">
+      <div ng-repeat="item in numberButtonList">
+        <button class="{{item}}" ng-click="clickHandler(item)">{{item}}</button>
+      </div>
+      <div ng-repeat="oper in operationButtonList">
+        <button class="{{oper}}" ng-click="clickOperation(oper)">{{oper}}</button>
+      </div>
+        <button ng-click="equal()">=</button>
+    </div>
+</div>
+  </body>
+</html>
