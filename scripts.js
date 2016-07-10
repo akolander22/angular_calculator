@@ -12,6 +12,7 @@ angular.module('calcApp').controller('MainController', function($scope){
 
   $scope.clickHandler = function(item){
     storedNumber += [item];
+    $scope.result = parseFloat(storedNumber);
     // console.log(storedNumber);
   }
 
@@ -39,8 +40,8 @@ angular.module('calcApp').controller('MainController', function($scope){
         $scope.result = firstNumber * secondNumber;
       break;
   }
-    console.log(oldNums);
-    // console.log($scope.result);
+    // console.log(oldNums);
+    console.log($scope.result);
     storedNumber = [0];
   }
 })
