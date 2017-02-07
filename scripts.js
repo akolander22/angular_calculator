@@ -44,4 +44,8 @@ angular.module('calcApp').controller('MainController', function($scope){
     console.log($scope.result);
     storedNumber = [0];
   }
+  $scope.clear = function(){
+    storedNumber = [0];
+    $scope.result = 0;
+  }
 })
